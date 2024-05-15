@@ -179,7 +179,7 @@ html{
   background-color:  #c89666;
 }
 .navigationPaneMob a:hover {
-  background-color: #555;
+  background-color: #c89666;
 }
 .navigation i{
   transition: all 0.3 ease-in-out;
