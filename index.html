@@ -1,11 +1,111 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Shravya's profile</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-      <h1 class="title">Shravya Ramasahayam </h1>
-      <script src="script.js"></script>
-  </body>
-</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lexend+Deca:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Shravya R</title>
+</head>
+<body>
+    <div class="navigation">
+        <!-- <div class="hanburgerIcon" onclick="toggleNavigationMenu()" id="hanburgerIconId"><i class="fa fa-bars" ></i></div> -->
+        <nav class="navigationPane" id="hamburgerMenu">
+            <div class="myPhoto">
+                <img src="assets/profilePhoto.png" alt="About Image">
+            </div>
+            <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            </ul>
+        </nav>
+        <div class="hanburgerIconMob" onclick="toggleNavigationMenuMob()" id="hanburgerIconIdMobile"><i class="fa fa-bars" ></i></div>
+        <nav class="navigationPaneMob" id="hamburgerMenuMob">
+            <div class="myPhoto">
+                <img src="assets/IMG20240107154054.png" alt="About Image">
+            </div>
+            <ul>
+            <li><a href="#about" onclick="toggleNavigationMenuMob()">About</a></li>
+            <li><a href="#education" onclick="toggleNavigationMenuMob()">Education</a></li>
+            <li><a href="#experience" onclick="toggleNavigationMenuMob()">Experience</a></li>
+            </ul>
+        </nav>
+
+
+    </div>
+    <div class="about-page" id="about">
+        <section>
+            <div class="description">
+                <h3>Hey!!</h3>
+                <h1>I'm Shravya Ramasahayam</h1>
+                <p>I am CSE graduate from Indian Institute of Technology Indore Batch'22. Currently working as SDE-1 at Flipkart Internet Private Limited.</p>
+            </div>
+            <div class="contactDiv">
+                <ul>
+                    <li><a href="mailto:shravya16097@gmail.com"><i class="fa fa-envelope"> </i></a></li>
+                    <li><a href="https://www.linkedin.com/in/shravya-ramasahayam/"><i class="fa fa-linkedin-square"></i></a></li>
+                    <li><a href="https://www.instagram.com/_shravya_r"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <div class="parentEducation" id="education">
+        <div class="education-page">
+            <section>
+                <div class="educationClass">
+                    <h2 class="sectionHeader">Education</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h3>Indian Institute of Technology Indore</h3>
+                            <p> 2018 - 2022 </p>
+                            <p> B.Tech in Computer Science and Engineering</p>
+                            <p> Minor in Humanities and Social Studies</p>
+                            <p> Thesis: Video Summarization for anomaly detection using Deep Learning</p>
+                            <p> CGPA: 9.47 </p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>Sri Chaitanya Jr College</h3>
+                            <p> 2016 - 2018</p>
+                            <p> TSBIE, MPC</p>
+                            <p> 98.7% </p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>DAV BDL Public School</h3>
+                            <p> 2015 - 2016</p>
+                            <p> CBSE Board</p>
+                            <p> CGPA: 10.0 </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    <div>
+    <div class="parentExperience" id="experience">
+        <div class="experience-page">
+            <section >
+                <div class="experienceClass">
+                    <h2 class="sectionHeader">Experience</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h3>Flipkart</h3>
+                            <p> Software Development Engineer</p>
+                            <p> Jun 2022 - Present </p>
+                        </div>
+                        <div class="timeline-item">
+                            <p> Summer Intern</p>
+                            <p> Jun - July 2021</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <nav class="footerPane">
+        <p> &#169; 2024 Shravya Ramasahayam </p>
+    </nav>
+</body>
