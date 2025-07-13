@@ -51,6 +51,18 @@ const Navbar = ({ activeSection }) => {
           </li>
           <li>
             <a
+              href="#publications"
+              className={activeSection === 'publications' ? 'active' : ''}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('publications');
+              }}
+            >
+              Publications
+            </a>
+          </li>
+          <li>
+            <a
               href="#projects"
               className={activeSection === 'projects' ? 'active' : ''}
               onClick={(e) => {
