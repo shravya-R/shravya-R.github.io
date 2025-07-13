@@ -39,6 +39,106 @@ const Home = () => {
               }}
             />
           </div>
+          
+          {/* Logos section */}
+          <div style={{ 
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            gap: '2rem', 
+            marginBottom: '2rem',
+            flexWrap: 'wrap'
+          }}>
+            <img 
+              src="/ucsd_logo.png" 
+              alt="UCSD Logo" 
+              style={{ 
+                height: '50px', 
+                width: 'auto', 
+                objectFit: 'contain',
+                filter: 'grayscale(20%)',
+                opacity: '0.8',
+                transition: 'all 0.3s ease'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.filter = 'grayscale(0%)';
+                e.target.style.opacity = '1';
+                e.target.style.transform = 'scale(1.05)';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.filter = 'grayscale(20%)';
+                e.target.style.opacity = '0.8';
+                e.target.style.transform = 'scale(1)';
+              }}
+            />
+            <img 
+              src="/IITI_Logo.png" 
+              alt="IITI Logo" 
+              style={{ 
+                height: '50px', 
+                width: 'auto', 
+                objectFit: 'contain',
+                filter: 'grayscale(20%)',
+                opacity: '0.8',
+                transition: 'all 0.3s ease'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.filter = 'grayscale(0%)';
+                e.target.style.opacity = '1';
+                e.target.style.transform = 'scale(1.05)';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.filter = 'grayscale(20%)';
+                e.target.style.opacity = '0.8';
+                e.target.style.transform = 'scale(1)';
+              }}
+            />
+            <img 
+              src="/amazon_logo.png" 
+              alt="Amazon Logo" 
+              style={{ 
+                height: '50px', 
+                width: 'auto', 
+                objectFit: 'contain',
+                filter: 'grayscale(20%)',
+                opacity: '0.8',
+                transition: 'all 0.3s ease'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.filter = 'grayscale(0%)';
+                e.target.style.opacity = '1';
+                e.target.style.transform = 'scale(1.05)';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.filter = 'grayscale(20%)';
+                e.target.style.opacity = '0.8';
+                e.target.style.transform = 'scale(1)';
+              }}
+            />
+            <img 
+              src="/flipkart_logo.png" 
+              alt="Flipkart Logo" 
+              style={{ 
+                height: '50px', 
+                width: 'auto', 
+                objectFit: 'contain',
+                filter: 'grayscale(20%)',
+                opacity: '0.8',
+                transition: 'all 0.3s ease'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.filter = 'grayscale(0%)';
+                e.target.style.opacity = '1';
+                e.target.style.transform = 'scale(1.05)';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.filter = 'grayscale(20%)';
+                e.target.style.opacity = '0.8';
+                e.target.style.transform = 'scale(1)';
+              }}
+            />
+          </div>
+          
           <div className="bio">
             <p style={{ fontSize: '1.2rem', fontWeight: '500', marginBottom: '1.5rem', color: '#007acc' }}>
               Hey there! Welcome to my online space!
