@@ -1,18 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Navbar = ({ activeSection }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMenuOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
     <nav className="navbar">
       <div className="nav-container">
-        {/* Removed nav-brand with name for a cleaner look */}
-        <ul className="nav-links">
+        {/* Hamburger menu button for mobile */}
+        <div className="hamburger" onClick={toggleMenu}>
+          <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}></span>
+          <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}></span>
+          <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}></span>
+        </div>
+
+        {/* Navigation links */}
+        <ul className={`nav-links ${isMenuOpen ? 'nav-open' : ''}`}>
           <li>
             <a
               href="#home"
@@ -51,18 +65,6 @@ const Navbar = ({ activeSection }) => {
           </li>
           <li>
             <a
-              href="#publications"
-              className={activeSection === 'publications' ? 'active' : ''}
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('publications');
-              }}
-            >
-              Publications
-            </a>
-          </li>
-          <li>
-            <a
               href="#projects"
               className={activeSection === 'projects' ? 'active' : ''}
               onClick={(e) => {
@@ -71,6 +73,18 @@ const Navbar = ({ activeSection }) => {
               }}
             >
               Projects
+            </a>
+          </li>
+          <li>
+            <a
+              href="#publications"
+              className={activeSection === 'publications' ? 'active' : ''}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('publications');
+              }}
+            >
+              Publications
             </a>
           </li>
           <li>

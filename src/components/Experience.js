@@ -49,44 +49,28 @@ const Experience = () => (
       <div className="section-header">
         <h2>Experience</h2>
       </div>
-      <ul className="publications-list">
+      <div className="experience-cards">
         {experiences.map((exp) => (
-          <li key={exp.id} className="publication-item">
-            <div style={{ marginBottom: '1rem', width: '100%' }}>
-              <h3 className="publication-title" style={{ marginBottom: '0.3rem' }}>{exp.position}</h3>
-              
-              {/* Company name and logo in a flex container */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.2rem' }}>
-                <p className="publication-authors" style={{ fontWeight: '600', color: '#007acc', margin: 0 }}>{exp.company}</p>
-                <img src={exp.logo} alt={exp.company + ' logo'} style={{ width: 60, height: 60, objectFit: 'contain' }} />
+          <div key={exp.id} className="experience-card">
+            <div className="experience-card-header">
+              <div className="experience-card-info">
+                <h3 className="experience-company">{exp.company}</h3>
+                <p className="experience-position">{exp.position}</p>
+                <p className="experience-duration">{exp.duration}</p>
+                <p className="experience-location">{exp.location}</p>
+                <ul className="experience-achievements">
+                  {exp.achievements.map((achievement, index) => (
+                    <li key={index}>{achievement}</li>
+                  ))}
+                </ul>
               </div>
-              
-              <p className="publication-venue" style={{ marginBottom: '0.2rem' }}>{exp.location}</p>
-              <div style={{ textAlign: 'right', color: '#666', fontSize: '0.9rem', marginBottom: '0.8rem' }}>{exp.duration}</div>
-              <ul style={{ listStyle: 'none', padding: 0 }}>
-                {exp.achievements.map((achievement, index) => (
-                  <li key={index} style={{ 
-                    marginBottom: '0.8rem', 
-                    paddingLeft: '1.5rem', 
-                    position: 'relative',
-                    fontSize: '0.95rem',
-                    lineHeight: '1.6',
-                    color: '#555'
-                  }}>
-                    <span style={{ 
-                      position: 'absolute', 
-                      left: '0', 
-                      color: '#007acc',
-                      fontWeight: 'bold'
-                    }}>•</span>
-                    {achievement}
-                  </li>
-                ))}
-              </ul>
+              <div className="experience-card-logo">
+                <img src={exp.logo} alt={exp.company + ' logo'} />
+              </div>
             </div>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   </section>
 );
