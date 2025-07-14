@@ -27,24 +27,24 @@ const Education = () => (
       <div className="section-header">
         <h2>Education</h2>
       </div>
-      <ul className="publications-list">
+      <div className="education-cards">
         {education.map((edu) => (
-          <li key={edu.id} className="publication-item">
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem', width: '100%' }}>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ fontSize: '1.35rem', fontWeight: 700, color: '#222', marginBottom: 2, wordBreak: 'break-word' }}>{edu.university}</div>
-                <div style={{ fontSize: '1.05rem', color: '#333', marginBottom: 2 }}>{edu.degree}</div>
-                <div style={{ fontSize: '0.98rem', color: '#007acc', marginBottom: 2 }}>{edu.timeline}</div>
-                <div style={{ fontSize: '0.95rem', color: '#888', marginBottom: 2 }}>{edu.location}</div>
-                <div style={{ fontSize: '0.95rem', color: '#666', marginTop: '0.2rem' }}>{edu.gpa}</div>
+          <div key={edu.id} className="education-card">
+            <div className="education-card-header">
+              <div className="education-card-info">
+                <h3 className="education-university">{edu.university}</h3>
+                <p className="education-degree">{edu.degree}</p>
+                <p className="education-timeline">{edu.timeline}</p>
+                <p className="education-location">{edu.location}</p>
+                <p className="education-gpa">{edu.gpa}</p>
               </div>
-              <div style={{ flexShrink: 0, marginLeft: 24, display: 'flex', alignItems: 'center' }}>
-                <img src={edu.logo} alt={edu.university + ' logo'} style={{ width: 60, height: 60, objectFit: 'contain' }} />
+              <div className="education-card-logo">
+                <img src={edu.logo} alt={edu.university + ' logo'} />
               </div>
             </div>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   </section>
 );

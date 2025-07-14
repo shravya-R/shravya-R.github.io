@@ -49,6 +49,36 @@ body {
   align-items: center;
 }
 
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.hamburger-line.open:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
 .nav-links {
   display: flex;
   list-style: none;
@@ -342,14 +372,317 @@ section {
   color: #007acc;
 }
 
+/* Education cards styles */
+.education-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin: 2rem 0;
+}
+
+.education-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.education-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
+  transform: translateY(-2px) scale(1.01);
+}
+
+.education-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.education-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.education-university {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.education-degree {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.education-timeline {
+  font-size: 1rem;
+  color: #007acc;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.education-location {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+
+.education-gpa {
+  font-size: 0.95rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.education-card-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.education-card-logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #f8f9fa;
+  padding: 8px;
+}
+
+/* Publications grid styles */
+.publications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.publication-item {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  padding: 1.5rem 1.5rem 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.publication-item:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
+  transform: translateY(-2px) scale(1.01);
+}
+
+.publication-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+
+.publication-link-btn {
+  background-color: #007acc;
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-left: 1rem;
+  white-space: nowrap;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 1px solid #007acc;
+  display: inline-block;
+}
+
+.publication-link-btn:hover {
+  background-color: #005a99;
+  transform: translateY(-1px);
+}
+
+.publication-venue {
+  font-size: 0.98rem;
+  color: #007acc;
+  margin-bottom: 0.2rem;
+  font-weight: 500;
+}
+
+.publication-abstract {
+  font-size: 0.97rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 0.7rem;
+  font-style: italic;
+}
+
+.publication-meta {
+  font-size: 0.92rem;
+  color: #666;
+  margin-bottom: 0.2rem;
+}
+
+.publication-issn-label {
+  color: #888;
+}
+
+.publication-issn {
+  color: #007acc;
+  font-weight: 500;
+}
+
+/* Experience cards styles */
+.experience-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin: 2rem 0;
+}
+
+.experience-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.experience-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
+  transform: translateY(-2px) scale(1.01);
+}
+
+.experience-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.experience-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.experience-company {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.experience-position {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.experience-duration {
+  font-size: 0.98rem;
+  color: #007acc;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.experience-location {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+
+.experience-achievements {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+}
+
+.experience-achievements li {
+  margin-bottom: 0.4rem;
+  padding-left: 1.2rem;
+  position: relative;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+.experience-achievements li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #007acc;
+  font-weight: bold;
+}
+
+.experience-card-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.experience-card-logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #f8f9fa;
+  padding: 8px;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
+  /* Show hamburger menu */
+  .hamburger {
+    display: flex;
+  }
+  
+  /* Mobile navigation */
   .nav-links {
-    gap: 1rem;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 2rem 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-links.nav-open {
+    right: 0;
+  }
+  
+  .nav-links li {
+    width: 100%;
   }
   
   .nav-links a {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    display: block;
+    width: 100%;
+  }
+  
+  .nav-links a.active::after {
+    bottom: 0;
   }
   
   section {
@@ -386,6 +719,61 @@ section {
     width: 200px;
     justify-content: center;
   }
+
+  .education-cards {
+    gap: 1.5rem;
+  }
+  .education-card {
+    padding: 1.2rem 1rem;
+    border-radius: 12px;
+  }
+  .education-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .education-card-logo img {
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+  }
+  .education-university {
+    font-size: 1.1rem;
+  }
+  .education-degree {
+    font-size: 0.98rem;
+  }
+  .publications-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .publication-item {
+    padding: 1.1rem 0.8rem 0.8rem 0.8rem;
+    border-radius: 10px;
+  }
+  .experience-cards {
+    gap: 1.5rem;
+  }
+  .experience-card {
+    padding: 1.2rem 1rem;
+    border-radius: 12px;
+  }
+  .experience-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .experience-card-logo img {
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+  }
+  .experience-company {
+    font-size: 1.05rem;
+  }
+  .experience-position {
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -398,11 +786,12 @@ section {
   }
   
   .nav-links {
-    gap: 0.8rem;
+    width: 200px;
+    padding: 80px 1.5rem 2rem;
   }
   
   .nav-links a {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   
   .section-header h2 {
@@ -421,4 +810,10 @@ section {
     width: 180px;
     height: 180px;
   }
+} 
+
+/* Remove timeline styles if present */
+.timeline, .timeline::before, .timeline-item, .timeline-marker, .timeline-dot, .timeline-line, .timeline-content, .timeline-header, .timeline-info, .timeline-university, .timeline-degree, .timeline-timeline, .timeline-location, .timeline-gpa, .timeline-logo, .timeline-logo img {
+  all: unset;
+  display: revert;
 } 
